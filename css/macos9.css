@@ -1,0 +1,204 @@
+/* Mac OS 9 Inspired Keyboard Styles */
+
+
+/* Text Display Area */
+
+.text-display-area {
+    background-color: #ffffff;
+    border: 2px inset #808080;
+    padding: 15px;
+    margin-bottom: 20px;
+    min-height: 100px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#text-display {
+    font-family: "Azeret Mono", monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    min-height: 1.5em;
+    white-space: pre-wrap;
+    word-break: break-word;
+    outline: none;
+}
+
+#text-display:focus {
+    outline: 1px solid #000080;
+}
+
+.placeholder-text {
+    color: #888;
+    font-style: italic;
+}
+
+
+/* Improved Font Controls with Old OS Look */
+
+.font-controls {
+    background-color: #c0c0c0;
+    border: 2px outset #f0f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.font-controls h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #808080;
+    padding-bottom: 5px;
+}
+
+
+/* Improved grid layout for font style options */
+
+.font-style-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 5px;
+    background-color: #d4d0c8;
+    border: 1px inset #808080;
+}
+
+.style-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid transparent;
+    background-color: #c0c0c0;
+    border: 1px outset #f0f0f0;
+}
+
+.style-option:hover {
+    background-color: #d0d0d0;
+}
+
+.style-option:active {
+    border-style: inset;
+    background-color: #b0b0b0;
+}
+
+.style-option input {
+    cursor: pointer;
+}
+
+.style-option span {
+    user-select: none;
+    font-size: 12px;
+}
+
+.style-option input:checked+span {
+    font-weight: bold;
+    color: #000080;
+}
+
+.italic-option {
+    margin-top: 8px;
+    grid-column: 1 / -1;
+    border-top: 1px solid #808080;
+    padding-top: 8px;
+    text-align: center;
+    background-color: #c0c0c0;
+    border: 1px outset #f0f0f0;
+}
+
+
+/* Old OS Style Keyboard */
+
+.retro-keyboard {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    border-radius: 0;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: inset 1px 1px #fff, inset -1px -1px #888;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.key {
+    width: 45px;
+    height: 45px;
+    background-color: #e0e0e0;
+    border: 2px outset #f0f0f0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "Azeret Mono", monospace;
+    font-size: 16px;
+    transition: all 0.1s ease;
+    user-select: none;
+    color: #000;
+}
+
+.key:hover {
+    background-color: #d0d0d0;
+}
+
+.key:active,
+.key.key-pressed {
+    background-color: #b0b0b0;
+    border-style: inset;
+    transform: translateY(1px);
+}
+
+.key.space {
+    width: 250px;
+}
+
+
+/* Keyboard Section */
+
+.keyboard-section {
+    padding: 20px;
+    background-color: #c0c0c0;
+}
+
+
+/* Mac OS 9 Window Styles */
+
+.os-window {
+    border: 2px outset #c0c0c0;
+    background-color: #c0c0c0;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.window-header {
+    background: linear-gradient(to right, #cccccc, #eeeeee);
+    border-bottom: 1px solid #888888;
+    padding: 3px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .font-style-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .key {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .key.space {
+        width: 150px;
+    }
+}

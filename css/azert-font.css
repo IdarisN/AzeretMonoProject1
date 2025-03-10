@@ -1,0 +1,170 @@
+/* AZERT MONO Font Face Declaration */
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-bolditalic.woff2") format("woff2");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* Font weight variations */
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-extralight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-extrabold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AZERT MONO";
+    src: url("../assets/azert-mono-black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Base font class */
+
+.azert-font {
+    font-family: "Azeret Mono", monospace;
+    font-optical-sizing: auto;
+    letter-spacing: 0.05em;
+}
+
+
+/* Font weight classes */
+
+.azert-font-thin {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 100;
+}
+
+.azert-font-extralight {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 200;
+}
+
+.azert-font-light {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 300;
+}
+
+.azert-font-regular {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 400;
+}
+
+.azert-font-medium {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 500;
+}
+
+.azert-font-semibold {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 600;
+}
+
+.azert-font-bold {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 700;
+}
+
+.azert-font-extrabold {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 800;
+}
+
+.azert-font-black {
+    font-family: "Azeret Mono", monospace;
+    font-weight: 900;
+}
+
+.azert-font-italic {
+    font-family: "Azeret Mono", monospace;
+    font-style: italic;
+}
+
+
+/* Global font application */
+
+* {
+    font-family: "Azeret Mono", monospace !important;
+    font-optical-sizing: auto;
+}
+
+
+/* Fallback styling */
+
+.azert-font-fallback {
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.05em;
+}

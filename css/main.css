@@ -1,0 +1,1857 @@
+/* Reset and Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "AZERT MONO", "Courier New", monospace !important;
+}
+
+body {
+    background-color: #95EAFF;
+    color: #000;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+/* OS Container */
+
+.os-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #AF7CFF;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+}
+
+.os-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+
+/* Window Title Bar */
+
+.window-title-bar {
+    background: linear-gradient(to right, #000080, hwb(221 5% 7% / 0.918));
+    color: #000;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.control-button {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border: 2px outset #DAC2FE;
+    background-color: #AF7CFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    color: #000;
+}
+
+.control-button:active {
+    border-style: inset;
+}
+
+
+/* OS Menu (Navigation) */
+
+.os-menu {
+    background-color: #c0c0c0;
+    border-bottom: 2px solid #808080;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000080;
+}
+
+.bold-mono {
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #000;
+    background-color: #AF7CFF;
+    border: 2px outset #DAC2FE;
+    padding: 2px 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: #d0d0d0;
+}
+
+.menu-item:active {
+    border-style: inset;
+}
+
+
+/* Typeface Info Section */
+
+.typeface-info {
+    padding: 15px;
+    background-color: #DAC2FE;
+    border: 2px solid #AF7CFF;
+}
+
+.typeface-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.typeface-logo {
+    width: 60px;
+    height: 60px;
+    background-color: #000080;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    margin-right: 15px;
+    border: 2px outset #c0c0c0;
+}
+
+.typeface-details h1 {
+    font-size: 2.5rem;
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+.typeface-metadata {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.typeface-metadata span {
+    margin-right: 5px;
+}
+
+.typeface-description {
+    margin-bottom: 20px;
+}
+
+.typeface-features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    width: 23%;
+    background-color: #f0f0f0;
+    border: 2px outset #c0c0c0;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.feature-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.feature-text {
+    font-size: 0.8rem;
+}
+
+
+/* Description Box */
+
+.description-box {
+    background-color: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    margin: 10px;
+    padding: 10px;
+}
+
+#typing-effect {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+
+/* Creator Information */
+
+.creator-info {
+    margin: 10px;
+}
+
+.info-window {
+    border: 2px outset #c0c0c0;
+    background-color: #c0c0c0;
+}
+
+.creators-split-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.creator-row {
+    display: flex;
+    gap: 10px;
+    height: 200px;
+}
+
+.creator-panel {
+    flex: 1;
+    display: flex;
+    border: 2px inset #95EAFF;
+    background-color: #AF7CFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.creator-panel:hover {
+    box-shadow: 0 0 0 2px #000080;
+}
+
+.creator-panel.left {
+    flex-direction: row;
+}
+
+.creator-panel.right {
+    flex-direction: row-reverse;
+}
+
+.creator-image {
+    width: 150px;
+    height: 100%;
+    background-color: #d0d0d0;
+    border-right: 2px inset #808080;
+    position: relative;
+    overflow: hidden;
+}
+
+.creator-panel.right .creator-image {
+    border-right: none;
+    border-left: 2px inset #808080;
+}
+
+.creator-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.creator-details {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.creator-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000080;
+}
+
+.creator-title {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.creator-bio {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.creator-contact {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    background-color: #f0f0f0;
+    border: 1px inset #c0c0c0;
+    padding: 5px;
+}
+
+.file-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: #c0c0c0;
+    border: 1px outset #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.file-icon:active {
+    border-style: inset;
+}
+
+.creator-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+.modal-header {
+    background-color: #000080;
+    color: white;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.modal-content {
+    padding: 15px;
+    background-color: #DAC2FE;
+    border: 2px solid #AF7CFF;
+}
+
+.modal-tabs {
+    display: flex;
+    border-bottom: 1px solid #808080;
+    margin-bottom: 10px;
+}
+
+.modal-tab {
+    padding: 3px 10px;
+    border: 1px solid #808080;
+    border-bottom: none;
+    margin-right: 5px;
+    background-color: #d0d0d0;
+    cursor: pointer;
+}
+
+.modal-tab.active {
+    background-color: #ffffff;
+    position: relative;
+    top: 1px;
+}
+
+.tab-content {
+    background-color: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.modal-button {
+    padding: 5px 15px;
+    border: 2px outset #c0c0c0;
+    background-color: #c0c0c0;
+    cursor: pointer;
+}
+
+.modal-button:active {
+    border-style: inset;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
+
+
+/* OS Window Sections */
+
+.os-window {
+    border: 2px outset #c0c0c0;
+    margin: 10px;
+    background-color: #c0c0c0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+
+/* Keyboard Section */
+
+#keyboard-section .window-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero {
+    width: 100%;
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000080;
+}
+
+.keyboard-instructions {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #ffffcc;
+    border: 1px solid #cccc99;
+}
+
+
+/* Font Style Selector */
+
+.font-style-selector {
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.selector-header {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.style-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.style-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.style-option input {
+    cursor: pointer;
+}
+
+.style-name {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Preview text styles */
+#type-input, #dynamic-text {
+    font-family: 'Azeret Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+/* Active state for selected style */
+.style-option input:checked + .style-name {
+    color: #AF7CFF;
+    font-weight: bold;
+}
+
+.italic-option {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #ccc;
+}
+
+.type-here-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 10px;
+}
+
+.type-here-label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#type-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+/* Old OS Style Keyboard */
+.retro-keyboard {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: inset 1px 1px #fff, inset -1px -1px #888;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.key {
+    width: 45px;
+    height: 45px;
+    background-color: #e0e0e0;
+    border: 2px outset #f0f0f0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 16px;
+    transition: all 0.1s ease;
+    user-select: none;
+}
+
+.key:hover {
+    background-color: #d0d0d0;
+}
+
+.key:active, .key.pressed {
+    background-color: #b0b0b0;
+    border-style: inset;
+    transform: translateY(1px);
+}
+
+.key.space {
+    width: 250px;
+}
+
+.text-display-area {
+    background-color: #fff;
+    border: 2px inset #808080;
+    border-radius: 0;
+    padding: 15px;
+    margin-bottom: 20px;
+    min-height: 100px;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 18px;
+}
+
+#text-display {
+    min-height: 1.5em;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Font controls styling */
+.font-controls {
+    background-color: #c0c0c0;
+    border: 2px outset #f0f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.font-controls h3 {
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.font-style-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+}
+
+.style-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.style-option:hover {
+    background-color: #d0d0d0;
+}
+
+.italic-option {
+    margin-top: 8px;
+    border-top: 1px solid #808080;
+    padding-top: 8px;
+}
+
+.typeface-showcase {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.typeface-showcase p {
+    margin-bottom: 10px;
+}
+
+.dynamic-text {
+    font-size: 2rem;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px inset #808080;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+}
+
+
+/* Gallery Section Improvements */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-card {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px #fff, inset -1px -1px #888;
+    width: 200px;
+    overflow: hidden;
+}
+
+.gallery-card .window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #808080;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+.gallery-card .window-controls-mac {
+    display: flex;
+    gap: 5px;
+}
+
+.gallery-card .mac-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5f56; /* Red for close */
+    border: 1px solid #e33e41;
+    cursor: pointer;
+}
+
+.gallery-card .mac-control.minimize {
+    background-color: #ffbd2e; /* Yellow for minimize */
+    border-color: #e09e3e;
+}
+
+.gallery-card .mac-control.zoom {
+    background-color: #27c93f; /* Green for zoom */
+    border-color: #1aab29;
+}
+
+.gallery-image-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#zoomed-image {
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+/* Zoom Modal */
+.zoom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.zoom-modal.active {
+    display: flex;
+}
+
+.zoom-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border: 2px solid #AF7CFF;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.close-zoom {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #AF7CFF;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.close-zoom:hover {
+    background: #8A5CFF;
+    transform: rotate(90deg);
+}
+
+/* Card Interactions */
+.wrap {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.wrap:hover {
+    transform: perspective(100rem) translateY(-10px) scale(1.02);
+}
+
+.wrap.active {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+/* Navigation Arrows */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #AF7CFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.gallery-nav:hover {
+    background: #8A5CFF;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav.prev {
+    left: -50px;
+}
+
+.gallery-nav.next {
+    right: -50px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-nav {
+        display: none;
+    }
+    
+    .wrap {
+        flex: 0 1 280px;
+    }
+}
+
+
+/* Glyph Keyboard Section */
+
+.glyph-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px #fff, inset -1px -1px #888;
+}
+
+.glyph-section h2 {
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.glyph-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.glyph-category {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 2px outset #c0c0c0;
+    background-color: #c0c0c0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.glyph-category.active {
+    border-style: inset;
+    background-color: #b0b0b0;
+}
+
+.glyph-category:hover {
+    background-color: #b0b0b0;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.keyboard span {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-color: #e0e0e0;
+    font-family: 'AzertMono', monospace;
+    font-size: 16px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.keyboard span:hover {
+    background-color: #d0d0d0;
+}
+
+
+/* GLIF Section */
+
+.glif-container {
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px inset #808080;
+}
+
+.glif-header {
+    margin-bottom: 20px;
+}
+
+.glif-header h2 {
+    margin-bottom: 10px;
+    color: #000080;
+}
+
+.glif-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.glif-category {
+    padding: 5px 10px;
+    border: 2px outset #c0c0c0;
+    background-color: #c0c0c0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.glif-category.active {
+    border-style: inset;
+    background-color: #b0b0b0;
+}
+
+.glif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.glif-item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.glif-item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.glif-info-panel {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 2px inset #808080;
+    padding: 15px;
+}
+
+.glif-preview {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-right: 20px;
+}
+
+.glif-details {
+    flex: 1;
+}
+
+.glif-details div {
+    margin-bottom: 8px;
+}
+
+
+/* Status Bar */
+
+.status-bar {
+    background-color: #c0c0c0;
+    border-top: 2px solid #808080;
+    padding: 3px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+.status-item {
+    border: 1px inset #808080;
+    padding: 2px 8px;
+    background-color: #ffffff;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .os-menu {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    .nav-links li {
+        margin-left: 0;
+    }
+    .creator-profile {
+        flex-direction: column;
+    }
+    .profile-icon {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .creator-row {
+        flex-direction: column;
+        height: auto;
+    }
+    .creator-panel {
+        height: 150px;
+    }
+    .creator-image {
+        width: 100px;
+    }
+    .typeface-features {
+        flex-direction: column;
+    }
+    .feature-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .retro-keyboard {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    .style-options {
+        flex-direction: column;
+    }
+    .glif-grid {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    }
+    .glif-info-panel {
+        flex-direction: column;
+    }
+    .glif-preview {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Add these new styles */
+
+.keyboard-row.font-controls {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.key.font-key {
+    flex: 1;
+    background-color: #AF7CFF;
+    color: #000;
+    border: 2px outset #DAC2FE;
+    padding: 8px;
+    transition: all 0.2s ease;
+}
+
+.key.font-key.active-style {
+    background-color: #DAC2FE;
+    border-style: inset;
+    color: #000;
+}
+
+
+/* Update the glyph popup styles to better handle the larger number of variants */
+
+.glyph-popup {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    border-radius: 4px;
+    padding: 8px;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for better organization */
+    gap: 4px;
+    z-index: 1000;
+    min-width: 160px;
+    /* Increased width to accommodate more glyphs */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.glyph-variant {
+    padding: 8px;
+    font-size: 14px;
+    background: #c0c0c0;
+    border: 1px outset #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Adjust keyboard layout for better spacing */
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 0 20px;
+}
+
+.glyph-key {
+    width: 60px;
+    /* Slightly larger keys */
+    height: 60px;
+}
+
+
+/* Add scrollbar styles for popups with many variants */
+
+.glyph-popup {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #AF7CFF #DAC2FE;
+}
+
+.glyph-popup::-webkit-scrollbar {
+    width: 8px;
+}
+
+.glyph-popup::-webkit-scrollbar-track {
+    background: #DAC2FE;
+}
+
+.glyph-popup::-webkit-scrollbar-thumb {
+    background-color: #AF7CFF;
+    border-radius: 4px;
+    border: 2px solid #DAC2FE;
+}
+
+
+/* Glyph Section Styles */
+
+.glyph-preview {
+    background: #DAC2FE;
+    border: 2px inset #AF7CFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Azeret Mono', monospace;
+}
+
+#selected-glyph {
+    font-size: 72px;
+    margin-bottom: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#glyph-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.glyph-keyboard-container {
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.glyph-key {
+    font-family: 'Azeret Mono', monospace;
+    width: 50px;
+    height: 50px;
+    background: #c0c0c0;
+    border: 2px outset #ffffff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+}
+
+.glyph-key:hover {
+    background: #b0b0b0;
+}
+
+.glyph-key:active {
+    border-style: inset;
+}
+
+.glyph-variants {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 8px;
+    border-radius: 4px;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    z-index: 1000;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.glyph-key:hover .glyph-variants {
+    display: grid;
+}
+
+.variant {
+    font-family: 'Azeret Mono', monospace;
+    padding: 8px;
+    background: #c0c0c0;
+    border: 1px outset #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.variant:hover {
+    background: #b0b0b0;
+}
+
+.variant:active {
+    border-style: inset;
+}
+
+.copy-feedback {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Ensure Azeret Mono is loaded with all variants */
+
+.azeret-mono {
+    font-family: 'Azeret Mono', monospace;
+}
+
+.glyph-preview-container {
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#glyph-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#selected-glyph {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 72px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#glyph-name {
+    font-size: 14px;
+    color: #666;
+}
+
+.glyph-keyboard-container {
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.glyph-key {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #c0c0c0;
+    border: 2px outset #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Azeret Mono', monospace;
+}
+
+.main-glyph {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.glyph-variants {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 8px;
+    border-radius: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.glyph-key:hover .glyph-variants {
+    display: grid;
+}
+
+.variant-glyph {
+    font-family: 'Azeret Mono', monospace;
+    padding: 8px;
+    background: #c0c0c0;
+    border: 1px outset #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.variant-glyph:hover {
+    background: #b0b0b0;
+}
+
+.copy-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 10px 20px;
+    border-radius: 4px;
+    animation: fadeInOut 2s ease;
+    z-index: 1000;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Interactive Keyboard Styles */
+.type-test {
+    margin-top: 20px;
+}
+
+#type-input {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    background: #fff;
+    border: 2px solid #AF7CFF;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Azeret Mono', monospace;
+}
+
+#dynamic-text {
+    margin-top: 20px;
+    padding: 15px;
+    min-height: 50px;
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Azeret Mono', monospace;
+}
+
+/* Ensure font styles are applied immediately */
+.azeret-mono {
+    transition: all 0.2s ease;
+}
+
+/* Make sure gallery images are clickable */
+.gallery-image {
+    cursor: pointer;
+}
+
+/* Font Tester Section Styles */
+.font-controls {
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.text-display-area {
+    background: #fff;
+    border: 2px solid #AF7CFF;
+    padding: 20px;
+    min-height: 100px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#dynamic-text {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    min-height: 1.5em;
+}
+
+/* Interactive Keyboard Styles */
+.keyboard-container {
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.key {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #AF7CFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Azeret Mono', monospace;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.key:hover {
+    background: #F0E6FF;
+}
+
+.key:active {
+    background: #AF7CFF;
+    color: #fff;
+    transform: translateY(2px);
+}
+
+.key.special {
+    width: 100px;
+    font-size: 0.9rem;
+}
+
+/* Font Style Controls */
+.style-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.style-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.style-option input {
+    cursor: pointer;
+}
+
+.style-name {
+    font-size: 0.9rem;
+}
+
+/* Active state styles */
+.key.active {
+    background: #AF7CFF;
+    color: #fff;
+    transform: translateY(2px);
+}
+
+/* Interactive Keyboard Section */
+.keyboard-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Text Display Area */
+.text-display {
+    background: #fff;
+    border: 2px solid #AF7CFF;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 100px;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyboard Layout */
+.keyboard {
+    background: #DAC2FE;
+    border: 2px solid #AF7CFF;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.key {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #AF7CFF;
+    border-radius: 8px;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.key:hover {
+    background: #F5EEFF;
+}
+
+.key:active, .key.pressed {
+    background: #AF7CFF;
+    color: white;
+    transform: translateY(2px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.key.space {
+    width: 200px;
+}
+
+.key.backspace {
+    width: 80px;
+}
+
+/* Font Style Controls */
+.font-controls {
+    background: #F5EEFF;
+    border: 2px solid #AF7CFF;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.font-style-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.style-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.style-option:hover {
+    background: #DAC2FE;
+}
+
+.style-option input:checked + span {
+    color: #AF7CFF;
+    font-weight: bold;
+}
+
+.glyph-section {
+    margin: 20px 0;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.keyboard span {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    font-family: 'AzertMono', monospace;
+    font-size: 16px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.keyboard span:hover {
+    background-color: #e0e0e0;
+}
+
+/* Glyph Section with Old OS Look */
+#glif-section {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    margin: 20px 0;
+    box-shadow: inset 1px 1px #fff, inset -1px -1px #888;
+}
+
+#glif-section .window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #808080;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+#glif-section .window-controls-mac {
+    display: flex;
+    gap: 5px;
+}
+
+#glif-section .mac-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5f56; /* Red for close */
+    border: 1px solid #e33e41;
+    cursor: pointer;
+}
+
+#glif-section .mac-control.minimize {
+    background-color: #ffbd2e; /* Yellow for minimize */
+    border-color: #e09e3e;
+}
+
+#glif-section .mac-control.zoom {
+    background-color: #27c93f; /* Green for zoom */
+    border-color: #1aab29;
+}
+
+.glyph-section {
+    padding: 20px;
+}
+
+.glyph-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.glyph-category {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 2px outset #c0c0c0;
+    background-color: #c0c0c0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.glyph-category.active {
+    border-style: inset;
+    background-color: #b0b0b0;
+}
+
+.glyph-category:hover {
+    background-color: #b0b0b0;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.keyboard span {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-color: #e0e0e0;
+    font-family: 'AzertMono', monospace;
+    font-size: 16px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.keyboard span:hover {
+    background-color: #d0d0d0;
+}
